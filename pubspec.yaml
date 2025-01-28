@@ -39,6 +39,7 @@ dependencies:
   geolocator: ^9.0.2
   duration: ^4.0.3
   intl: ^0.19.0
+  get: ^4.6.5
 
 dev_dependencies:
   flutter_test:
