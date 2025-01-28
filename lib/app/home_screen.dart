@@ -4,22 +4,22 @@ import 'package:get/get.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
 class HomeScreen extends StatelessWidget {
-   HomeScreen({super.key});
+  HomeScreen({super.key});
 
   final HomeController homeController = Get.put(HomeController());
 
-
-
-  
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: GoogleMap(
-        initialCameraPosition: CameraPosition(
-          target: LatLng(37.7749, -122.4194),
-          zoom: 14.4746,
-        ),
-      ),
+          myLocationEnabled: true,
+          initialCameraPosition: const CameraPosition(
+            target: LatLng(37.7749, -122.4194),
+            zoom: 14.4746,
+          ),
+          onMapCreated: (controller) {
+            homeController.mapController = controller;
+          }),
     );
   }
 }
