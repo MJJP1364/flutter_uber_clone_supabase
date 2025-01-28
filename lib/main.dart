@@ -9,7 +9,7 @@ void main() {
     statusBarColor: Colors.transparent,
   ));
   runApp(
-    const GetMaterialApp(
+    GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Your App Title',
       home: HomeScreen(),
