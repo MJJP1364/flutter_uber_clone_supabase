@@ -1,5 +1,11 @@
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
-  
+  enum  AppState {
+  choosingLocation,
+  confirmFare,
+  waitingForPickup,
+  riding,
+  postRide,
 }
+
+class HomeController extends GetxController {}
